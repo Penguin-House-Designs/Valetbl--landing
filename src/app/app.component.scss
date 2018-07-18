@@ -1,10 +1,14 @@
 .container {
   width:100%;
-  height: 100vh;
+  // height: 100vh;
   position:relative;
   background-color: #338DC6 !important;
   font-family: "Helvetica Neue" !important;
+  filter: drop-shadow(5px 5px 10px black);
 }
+
+
+
 
 .form-padding{
   padding-right: 40px !important;
@@ -97,7 +101,7 @@ fieldset {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    animation: fadeDark 1s ease-in-out 11s 1 normal forwards !important;
+    animation: fadeDark 1s ease-in-out 10s 1 normal forwards !important;
 }
 
 .animation1{
@@ -148,7 +152,7 @@ fieldset {
     0%{
         opacity: 0;
     }
-    30%{
+    50%{
         opacity: 1;
     }
     100%{
@@ -175,7 +179,7 @@ fieldset {
     align-items: center;
     padding-top: 5%;
     filter: drop-shadow(5px 5px 10px black);
-    animation: fadeHome 1s ease-in-out 12s 1 normal forwards !important;
+    animation: fadeHome 1s ease-in-out 11s 1 normal forwards !important;
     /* font-size: 30px; */
 }
 
@@ -184,15 +188,18 @@ fieldset {
 }
 
 .img-cont{
+    // width: 100%;
+    overflow: hidden;
     opacity: 0;
     display: flex;
     flex: 1;
     justify-content: center;
     align-items: flex-end;
-    animation: fadeHome 1s ease-in-out 12s 1 normal forwards !important;
+    animation: fadeHome 1s ease-in-out 11s 1 normal forwards !important;
 }
 
 .background-img{
+  // overflow: hidden;
   width: 1100px;
   filter: drop-shadow(5px 5px 10px black);
 }
@@ -207,7 +214,7 @@ fieldset {
   align-items: center;
   justify-content: space-around;
   flex: .3;
-  animation: fadeHome 1s ease-in-out 12s 1 normal forwards !important;
+  animation: fadeHome 1s ease-in-out 11s 1 normal forwards !important;
 }
 
 .opt-in-text{
@@ -242,7 +249,8 @@ fieldset {
   position: absolute;
   right: 0;
   bottom: 1%;
-  animation: fadeHome 1s ease-in-out 12s 1 normal forwards !important;
+  z-index: 10;
+  animation: fadeHome 1s ease-in-out 11s 1 normal forwards !important;
 }
 
 .download-size{
@@ -259,7 +267,7 @@ fieldset {
     width: 30%;
     height: auto;
     overflow:hidden;
-    animation: turnOff 7s ease-in-out 4s 1 normal forwards !important;
+    animation: turnOff 6s ease-in-out 4s 1 normal forwards !important;
     font-family: "Helvetica Neue" !important;
     font-size: 36px;
     color: #1C3B5F;
@@ -361,5 +369,204 @@ fieldset {
   }
 
   .sidenav-contain{
+    background: #338DC6 !important;
     height: 100vh !important;
+    // width: 100vw;
+    overflow: hidden;
   }
+
+  @media screen and (max-width: 800px) {
+    .background-img{
+      width: 900px;
+    }
+    .opt-in-contain{
+      margin-top: 5%;
+    }
+
+    .img-size{
+      margin-top: 5%;
+      width: 30%;
+    }
+    
+    .opt-in-button{
+      width: 23%;
+    }
+    
+    .download-size{
+      height: 40px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .background-img{
+      width: 700px;
+    }
+    .opt-in-contain{
+      margin-top: 8%;
+    }
+
+    .img-size{
+      margin-top: 8%;
+      width: 40%;
+    }
+    
+    .opt-in-button{
+      width: 30%;
+    }
+    
+    .download-size{
+      height: 35px;
+    }
+  }
+
+  @media screen and (max-width: 890px) {
+    .animation1{
+    text-align: center;
+    width: 50%;
+    height: auto;
+    color: #1C3B5F;
+    font-size: 36px;
+    position: absolute;
+    left: 25%;
+    top: 45%;
+    animation: fadeIn 4s ease-in-out 0s 1 normal forwards;
+    }
+
+
+    .content {
+      opacity: 0;
+      position: absolute;
+      top: 45%;
+      left: 25%;
+      // transform: translate(-50%, -50%);
+      width: 50%;
+      height: auto;
+      overflow:hidden;
+      animation: turnOff 6s ease-in-out 4s 1 normal forwards !important;
+      font-family: "Helvetica Neue" !important;
+      font-size: 32px;
+      color: #1C3B5F;
+      line-height: 40px;
+      
+      &__container {
+        overflow: hidden;
+        height: 40px;
+        
+        display: flex;
+        width: 100%;
+        
+        &__text {
+          // display: inline;
+          text-align: right;
+        }
+    
+        &__list {
+          text-align: left;
+          list-style: none;
+          color: #338DC6;
+          -webkit-animation-name: change;
+          -webkit-animation-duration: 21s;
+          -webkit-animation-iteration-count: 1;
+          animation-name: change;
+          animation-duration: 21s;
+          animation-delay: 1s;
+          animation-iteration-count: 1;
+    
+          &__item {
+            line-height:40px;
+            margin:0;
+          }
+        }
+      }
+    }
+
+
+
+
+
+
+  }
+
+  @media screen and (max-width: 450px) {
+    .background-img{
+      width: 700px;
+    }
+    .opt-in-contain{
+      margin-top: 25%;
+    }
+
+    .img-size{
+      margin-top: 30%;
+      width: 40%;
+    }
+    
+    .opt-in-button{
+      width: 40%;
+    }
+    
+    .download-size{
+      height: 35px;
+    }
+    .animation1{
+      text-align: center;
+      width: 70%;
+      color: #1C3B5F;
+      font-size: 25px;
+      position: absolute;
+      left: 15%;
+      top: 45%;
+      animation: fadeIn 4s ease-in-out 0s 1 normal forwards;
+      }
+
+      .content {
+        opacity: 0;
+        position: absolute;
+        top: 45%;
+        left: 15%;
+        // transform: translate(-50%, -50%);
+        width: 70%;
+        height: auto;
+        overflow:hidden;
+        animation: turnOff 6s ease-in-out 4s 1 normal forwards !important;
+        font-family: "Helvetica Neue" !important;
+        font-size: 25px;
+        color: #1C3B5F;
+        line-height: 40px;
+        
+        &__container {
+          overflow: hidden;
+          height: 40px;
+          
+          display: flex;
+          width: 100%;
+          
+          &__text {
+            // display: inline;
+            text-align: right;
+          }
+      
+          &__list {
+            text-align: left;
+            list-style: none;
+            color: #338DC6;
+            -webkit-animation-name: change;
+            -webkit-animation-duration: 21s;
+            -webkit-animation-iteration-count: 1;
+            animation-name: change;
+            animation-duration: 21s;
+            animation-delay: 1s;
+            animation-iteration-count: 1;
+      
+            &__item {
+              line-height:40px;
+              margin:0;
+            }
+          }
+        }
+      }
+
+
+
+  }
+
+  
