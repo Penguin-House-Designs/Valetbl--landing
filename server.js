@@ -14,10 +14,8 @@ app.post('/sendmail', (req, res) => {
     var server = email.server.connect({ user: "", password: "", host: "smtp.gmail.com", port: 465, ssl: true });
     console.log('email server connected');
     console.log(req.body);
-    // send the message and get a callback with an error or details of the message that was sent
-
-    let emailTemplate = 
-    `<html>
+    let emailTemplate =
+        `<html>
         <head>
             <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
             <style>
@@ -60,7 +58,7 @@ app.post('/sendmail', (req, res) => {
         attachment:
             [
                 { data: `${emailTemplate}</body></html>`, alternative: true },
-                { path: "src/assets/img/ValetBlu_Logo_Vertical_Full_Color.png", type: "image/png", headers:{"Content-ID":"<my-image>"} }
+                { path: "src/assets/img/ValetBlu_Logo_Vertical_Full_Color.png", type: "image/png", headers: { "Content-ID": "<my-image>" } }
             ]
     }, function (err, message) {
         if (err)
