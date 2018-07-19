@@ -76,6 +76,19 @@ app.post('/sendmail', (req, res) => {
     // }
     // );
 
+    // server.send({
+    //     text: req.body,
+    //     from: "info@valetblu.com",
+    //     to: 'ac12491@gmail.com',
+    //     subject: 'New Client!'
+    // }, function (err, message) {
+    //     if (err)
+    //         console.log(err);
+    //     else
+    //         res.json({ success: true, msg: 'sent' });
+    // }
+    // );
+
     const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
     const TOKEN_PATH = 'token.json';
 
@@ -178,8 +191,6 @@ app.post('/sendmail', (req, res) => {
           });
         });
       }
-
-
 });
 
 app.listen(8000, () => {

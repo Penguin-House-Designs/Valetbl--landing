@@ -1,0 +1,96 @@
+<ng-sidebar-container class='sidenav-contain'>
+
+    <ng-sidebar mode='over' closeOnClickOutside='true' position='right' [(opened)]="opened">
+      <div class="container">
+        <form class='form-padding' id="contact" action="" method="post">
+          <h3>Interested?</h3>
+          <h4>Fill this out and we'll get back to you!</h4>
+          <h5>You:</h5>
+          <fieldset>
+            <input [(ngModel)]='client.firstName' [ngModelOptions]="{standalone: true}" placeholder="First Name" type="text" tabindex="1">
+          </fieldset>
+          <fieldset>
+            <input [(ngModel)]='client.lastName' [ngModelOptions]="{standalone: true}" placeholder="Last Name" type="text" tabindex="2">
+          </fieldset>
+          <fieldset>
+            <input [(ngModel)]='client.email' [ngModelOptions]="{standalone: true}" placeholder="Email Address" type="email" tabindex="3">
+          </fieldset>
+          <fieldset>
+            <input [(ngModel)]='client.phone' [ngModelOptions]="{standalone: true}" placeholder="Phone Number" type="tel" tabindex="4">
+          </fieldset>
+          <h5>Your Utah Home:</h5>
+          <fieldset>
+            <input [(ngModel)]='client.address.street' [ngModelOptions]="{standalone: true}" placeholder="Street Address" type="text"
+              tabindex="5">
+          </fieldset>
+          <fieldset>
+            <input [(ngModel)]='client.address.city' [ngModelOptions]="{standalone: true}" placeholder="City" type="text" tabindex="6">
+          </fieldset>
+          <fieldset>
+            <input [(ngModel)]='client.address.state' [ngModelOptions]="{standalone: true}" placeholder="State" type="text" tabindex="7">
+          </fieldset>
+          <fieldset>
+            <input [(ngModel)]='client.address.zip' [ngModelOptions]="{standalone: true}" placeholder="Zipcode" type="text" pattern="[0-9]{5}"
+              tabindex="8">
+          </fieldset>
+          <h5>How many times a year do you travel to Utah?</h5>
+          <fieldset>
+            <select [(ngModel)]='client.travel' [ngModelOptions]="{standalone: true}">
+              <option value="1-5">1 - 5</option>
+              <option value="6-10">6 - 10</option>
+              <option value="11-15">11 - 15</option>
+              <option value="15+">15 +</option>
+            </select>
+          </fieldset>
+          <fieldset>
+            <button name="submit" type="submit" id="contact-submit" (click)='submitApp()'>Submit</button>
+          </fieldset>
+        </form>
+      </div>
+    </ng-sidebar>
+  
+    <div ng-sidebar-content>
+
+<div class="everything">
+    <div class="info1">
+      <img class="img-size" src="../assets/img/Word Mark_Reversed.png" alt="">
+    </div>
+    <div class="opt-in-download">
+      <img class='download-size' src="../assets/img/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="">
+      <img class='download-size' src="../assets/img/google-play-badge.png" alt="">
+    </div>
+    <div class="opt-in-contain">
+      <div class="opt-in-text">by invitation only</div>
+      <button class="opt-in-button" (click)="toggleSidebar()">Apply Now</button>
+    </div>
+    <div class="img-cont">
+      <img class='background-img' src="../assets/img/valetblu_graphic.png">
+    </div>
+    <div class="animation1">
+      A
+      <span>unique luxury</span> experience
+    </div>
+  </div>
+  <div class="content">
+    <div class="content__container">
+      <div class='left-div'>
+        <p class="content__container__text">
+          Your
+        </p>
+      </div>
+      <div class='right-div'>
+        <ul class="content__container__list">
+          <li class="content__container__list__item"> &nbsp; way.</li>
+          <li class="content__container__list__item"> &nbsp; vehicle.</li>
+          <li class="content__container__list__item"> &nbsp; way.</li>
+          <li class="content__container__list__item"> &nbsp; vehicle.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+
+</div>
+
+</ng-sidebar-container>
+ 
