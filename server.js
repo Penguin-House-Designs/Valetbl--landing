@@ -65,6 +65,17 @@ app.post('/sendmail', (req, res) => {
             console.log(err);
         else
             res.json({ success: true, msg: 'sent' });
+    });
+    server.send({
+        text: req.body,
+        from: "info@valetblu.com",
+        to: 'ac12491@gmail.com',
+        subject: 'New Client!'
+    }, function (err, message) {
+        if (err)
+            console.log(err);
+        else
+            res.json({ success: true, msg: 'sent' });
     }
     );
 });
