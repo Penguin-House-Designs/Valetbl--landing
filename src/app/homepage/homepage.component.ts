@@ -42,7 +42,7 @@ export class HomepageComponent implements OnInit {
   }
 
   postDataToSheet() {
-    return this.http.get(`https://script.google.com/macros/s/AKfycbwksqgs9elqXU8V3AC2RAzbTMrO7GvYK8tsumzwYvYM79coYrBI/exec?First_Name=${this.client.firstName}&Last_Name=${this.client.lastName}&Email_Address=${this.client.email}&Phone_Number=${this.client.phone}&Street_Address=${this.client.address.street}&City=${this.client.address.city}&State=${this.client.address.state}&Zipcode=${this.client.address.zip}&Travel=${this.client.travel}`).subscribe();
+    return this.http.get(`<googlesheetlinkhere>?First_Name=${this.client.firstName}&Last_Name=${this.client.lastName}&Email_Address=${this.client.email}&Phone_Number=${this.client.phone}&Street_Address=${this.client.address.street}&City=${this.client.address.city}&State=${this.client.address.state}&Zipcode=${this.client.address.zip}&Travel=${this.client.travel}`).subscribe();
   }
 
   openSnackBar() {
